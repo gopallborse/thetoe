@@ -13,7 +13,9 @@ const Home = () => {
             </h1>
             <p className="mb-8 leading-relaxed">
               The Beautiful Universe is on an endless journey of Perfection.
+              <br />
               We all companions ought to associate each other to advance.
+              <br />
               The more we unite, the faster we advance.
             </p>
             <div className="flex justify-center">
@@ -28,7 +30,7 @@ const Home = () => {
           <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
             <img
               className="object-cover object-center rounded"
-              src="a.png"
+              src="https://dummyimage.com/720x600"
               alt="hero"
             />
           </div>

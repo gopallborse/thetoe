@@ -7,9 +7,9 @@ const Dots = (props) => {
       <section className="text-gray-600 body-font">
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-wrap -m-4">
-              {props.dots.map((a) => {
-                return <DotPreview key={a.id} title={a.title} body={a.body} />;
-              })}
+            {props.dots.map((a) => {
+              return <DotPreview key={a.id} title={a.title} body={a.body} />;
+            })}
           </div>
         </div>
       </section>
@@ -33,9 +33,7 @@ const DotPreview = (props) => {
           <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
             {props.title}
           </h1>
-          <p className="leading-relaxed mb-3">
-            {props.body}
-          </p>
+          <p className="leading-relaxed mb-3">{props.body}</p>
           <div className="flex items-center flex-wrap ">
             <NavLink to="/dot">Read More</NavLink>
             <svg
