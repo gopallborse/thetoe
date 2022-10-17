@@ -25,7 +25,7 @@ class App extends Component {
       passowrd: null,
       isRegistered: false,
       showPass: false,
-      dots:null
+      dots:[]
     };
   }
 
@@ -62,7 +62,7 @@ class App extends Component {
           <Header isRegistered={this.state.isRegistered} /> 
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/dots" element={<Dots />} />
+            <Route path="/dots" element={<Dots dots={this.state.dots} />} />
             <Route path="/dot" element={<Dot />} />
             <Route path="/sparks" element={<Sparks />} />
             <Route path="/spark" element={<Spark />} />
