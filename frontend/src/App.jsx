@@ -25,7 +25,7 @@ class App extends Component {
       passowrd: null,
       isRegistered: false,
       showPass: false,
-      dots:null
+      dots:[]
     };
   }
 
