@@ -25,7 +25,8 @@ class App extends Component {
       passowrd: null,
       isRegistered: false,
       showPass: false,
-      dots:[]
+      dots:[],
+      sparks:[]
     };
   }
 
@@ -34,6 +35,14 @@ class App extends Component {
       .get("https://jsonplaceholder.typicode.com/posts")
       .then((response) => {
         this.setState({dots: response.data});
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    axios
+      .get("https://jsonplaceholder.typicode.com/comments")
+      .then((response) => {
+        this.setState({sparks: response.data});
       })
       .catch((error) => {
         console.log(error);
@@ -64,7 +73,7 @@ class App extends Component {
             <Route path="/" element={<Home />} />
             <Route path="/dots" element={<Dots dots={this.state.dots} />} />
             <Route path="/dot" element={<Dot />} />
-            <Route path="/sparks" element={<Sparks />} />
+            <Route path="/sparks" element={<Sparks sparks={this.state.sparks} />} />
             <Route path="/spark" element={<Spark />} />
             <Route path="/growwithus" element={<GrowWithUs />} />
             <Route path="/whoweare" element={<WhoWeAre />} />
