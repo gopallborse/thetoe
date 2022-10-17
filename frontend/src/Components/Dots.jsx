@@ -1,7 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const Dots = () => {
+const Dots = (props) => {
+  console.log(props.dots)
   return (
     <div className="md:container md:mx-auto px-40">
       <section className="text-gray-600 body-font">

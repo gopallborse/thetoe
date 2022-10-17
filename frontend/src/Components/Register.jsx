@@ -95,11 +95,11 @@ const Register = (props) => {
                     {buttonText}
                   </button>
                 </div>
-              </div>
-              <div className="text-center mt-7">
-                <button className="uppercase px-24 md:px-[118px] lg:px-[140px] py-2 rounded-md text-white bg-blue-500 hover:bg-blue-600  font-medium ">
-                  Register
-                </button>
+                <div className="text-center mt-7">
+                  <button className="uppercase px-24 py-2 rounded-md text-white bg-blue-500 hover:bg-blue-600  font-medium ">
+                    Register
+                  </button>
+                </div>
               </div>
             </form>
           </div>
