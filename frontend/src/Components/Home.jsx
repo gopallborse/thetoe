@@ -2,40 +2,111 @@ import React from "react";
 
 const Home = () => {
   return (
-    <div className="md:container md:mx-auto px-40">
-      <section className="text-gray-600 body-font">
-        <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-          <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-            <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
-              The Theory
-              <br className="hidden lg:inline-block" />
-              of Everything.
+    <div>
+      <div className="flex justify-center bg-black">
+        <nav className="self-center w-full max-w-7xl  ">
+          <div className="flex flex-col lg:flex-row justify-around items-center text-white">
+            <h1 className="uppercase pl-5 py-4 text-lg font-sans font-bold">
+              hero
             </h1>
-            <p className="mb-8 leading-relaxed">
-              The Beautiful Universe is on an endless journey of Perfection.
-              <br />
-              We all companions ought to associate each other to advance.
-              <br />
-              The more we unite, the faster we advance.
-            </p>
-            <div className="flex justify-center">
-              <button className="inline-flex text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded text-lg">
-                Button
-              </button>
-              <button className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">
-                Button
-              </button>
+            <ul className="hidden lg:flex items-center text-[18px] font-semibold pl-32">
+              <li className="hover:underline  underline-offset-4 decoration-2 decoration-white py-2 rounded-lg px-5">
+                <a href="#">Home</a>
+              </li>
+              <li className="hover:underline underline-offset-4 decoration-2 decoration-white py-2 rounded-lg px-5">
+                <a href="#">Contact</a>
+              </li>
+              <li className="hover:underline underline-offset-4 decoration-2 decoration-white py-2 rounded-lg px-5">
+                <a href="#">Services</a>
+              </li>
+              <li className="hover:underline underline-offset-4 decoration-2 decoration-white py-2 rounded-lg px-5">
+                <a href="#">About</a>
+              </li>
+              <li className="hover:underline underline-offset-4 decoration-2 decoration-white py-2 rounded-lg px-5">
+                <a href="#">Pricing</a>
+              </li>
+            </ul>
+            <div className="text-white text-center text-base pr-5  inline-flex">
+              {" "}
+              <a
+                href="#"
+                className="w-8 h-8 inline-block rounded-full pt-[6px] hover:text-blue-500"
+              >
+                <i className="fa fa-twitter" />
+              </a>{" "}
+              <a
+                href="#"
+                className="w-8 h-8 inline-block rounded-full pt-[5px] hover:text-blue-500"
+              >
+                <i className="fa fa-instagram" />
+              </a>{" "}
+              <a
+                href="#"
+                className="w-8 h-8 inline-block rounded-full pt-[5px] hover:text-blue-500"
+              >
+                <i className="fa fa-facebook" />
+              </a>{" "}
+              <a
+                href="#"
+                className="w-8 h-8 inline-block rounded-full pt-[5px] hover:text-blue-500"
+              >
+                <i className="fa fa-google" />
+              </a>{" "}
+              <a
+                href="#"
+                className="w-8 h-8 inline-block rounded-full pt-[5px] hover:text-blue-500"
+              >
+                <i className="fa fa-linkedin" />
+              </a>{" "}
             </div>
           </div>
-          <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-            <img
-              className="object-cover object-center rounded"
-              src="https://dummyimage.com/720x600"
-              alt="hero"
-            />
+        </nav>
+      </div>
+      <div className="flex justify-center bg-black p-8 ">
+        <div className="flex flex-col justify-center">
+          <div className="flex flex-col lg:flex-row max-w-7xl justify-center items-center p-2 space-y-3 w-full">
+            <div className="flex flex-col  text-white md:items-start items-center justify-between  space-y-3 px-8">
+              <div className="text-5xl md:text-7xl font-bold ">
+                The Theory of Everything{" "}
+              </div>
+              <div className="text-lg uppercase md:text-3xl   ">
+                Interactive Components
+              </div>
+              <div className="text-xl md:text-3xl   ">@tailblocks.org</div>
+            </div>
+            <div className="flex space-x-2 md:space-x-6 md:m-4">
+              <div className="md:w-20 w-10 h-60 md:h-96  overflow-hidden rounded-xl">
+                <img
+                  src="https://source.unsplash.com/100x400/?man"
+                  className="h-full w-full"
+                  alt=""
+                />
+              </div>
+              <div className="md:w-60 w-28 h-60 md:h-96  overflow-hidden rounded-xl">
+                <img
+                  src="https://source.unsplash.com/200x400/?girl"
+                  className="h-full w-full"
+                  alt=""
+                />
+              </div>
+              <div className="md:w-28  w-16 h-60 md:h-96  overflow-hidden rounded-xl">
+                <img
+                  src="https://source.unsplash.com/100x400/?boy"
+                  className="h-full w-full"
+                  alt=""
+                />
+              </div>
+              <div className="md:w-20 w-10 h-60 md:h-96  overflow-hidden rounded-xl">
+                <img
+                  src="https://source.unsplash.com/100x400/?women"
+                  className="h-full w-full"
+                  alt=""
+                />
+              </div>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 };

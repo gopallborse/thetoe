@@ -10,7 +10,8 @@ import Spark from "./Components/Spark";
 import GrowWithUs from "./Components/GrowWithUs";
 import WhoWeAre from "./Components/WhoWeAre";
 import ContactUs from "./Components/ContactUs";
-import Register from "./Components/Register";
+import Login from "./Components/Login";
+import SignUp from "./Components/SignUp";
 import Greet from "./Components/Greet";
 import NoPage from "./Components/NoPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -25,8 +26,8 @@ class App extends Component {
       passowrd: null,
       isRegistered: false,
       showPass: false,
-      dots:[],
-      sparks:[]
+      dots: [],
+      sparks: [],
     };
   }
 
@@ -34,7 +35,7 @@ class App extends Component {
     axios
       .get("https://jsonplaceholder.typicode.com/posts")
       .then((response) => {
-        this.setState({dots: response.data});
+        this.setState({ dots: response.data });
       })
       .catch((error) => {
         console.log(error);
@@ -42,56 +43,42 @@ class App extends Component {
     axios
       .get("https://jsonplaceholder.typicode.com/comments")
       .then((response) => {
-        this.setState({sparks: response.data});
+        this.setState({ sparks: response.data });
       })
       .catch((error) => {
         console.log(error);
       });
   }
 
-  registrationHandler = (event) => {
+  loginHandler = (event) => {
     event.preventDefault();
-    const name = event.target.name.value;
-    const email = event.target.email.value;
-    const password = event.target.password.value;
-    this.setState({ name, email, password, isRegistered: true });
-    localStorage.setItem(name, name);
-  };
-
-  showPassHandler = () => {
-    this.setState({
-      showPass: !this.state.showPass,
-    });
+    this.setState({ isRegistered: true });
   };
 
   render() {
     return (
       <div>
         <BrowserRouter>
-          <Header isRegistered={this.state.isRegistered} /> 
+          <Header isRegistered={this.state.isRegistered} />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/dots" element={<Dots dots={this.state.dots} />} />
             <Route path="/dot" element={<Dot />} />
-            <Route path="/sparks" element={<Sparks sparks={this.state.sparks} />} />
+            <Route
+              path="/sparks"
+              element={<Sparks sparks={this.state.sparks} />}
+            />
             <Route path="/spark" element={<Spark />} />
             <Route path="/growwithus" element={<GrowWithUs />} />
             <Route path="/whoweare" element={<WhoWeAre />} />
             <Route path="/contactus" element={<ContactUs />} />
-            {this.state.isRegistered ? (
-              <Route path="/greet" element={<Greet />} />
-            ) : (
-              <Route
-                path="/register"
-                element={
-                  <Register
-                    submit={this.registrationHandler}
-                    showPass={this.state.showPass}
-                    click={this.showPassHandler}
-                  />
-                }
-              />
-            )}
+            <Route path="/greet" element={<Greet />} />
+            <Route
+              path="/login"
+              element={<Login submit={this.loginHandler} />}
+            />
+
+            <Route path="/signup" element={<SignUp />} />
             <Route path="/*" element={<NoPage />} />
           </Routes>
           <Footer />

@@ -42,12 +42,17 @@ const Header = (props) => {
             <span className="ml-3 text-xl">The ToE</span>
           </a>
           <div className="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
-            <NavLink to={props.isRegistered ? "/greet" : "/register"} className="mr-5 hover:text-gray-900">
-              <img
-                alt="content"
-                className="object-cover object-center h-full w-full"
-                src="https://dummyimage.com/40x40"
-              />
+            <NavLink
+              to="/login"
+              className="mr-5 hover:text-gray-900"
+            >
+              Login
+            </NavLink>
+            <NavLink
+              to="/signup"
+              className="mr-5 hover:text-gray-900"
+            >
+              SignUp
             </NavLink>
           </div>
         </div>
