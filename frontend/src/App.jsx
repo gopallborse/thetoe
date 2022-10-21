@@ -29,7 +29,7 @@ class App extends Component {
 
   componentDidMount() {
     axios
-      .get("https://jsonplaceholder.typicode.com/posts?_page=1&_limit=6")
+      .get("https://jsonplaceholder.typicode.com/posts?_page=1&_limit=3")
       .then((response) => {
         this.setState({ dots: response.data });
       })
