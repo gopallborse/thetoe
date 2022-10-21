@@ -13,9 +13,6 @@ const Header = (props) => {
             <NavLink to="/dots" className="mr-5 hover:text-gray-900">
               Dots
             </NavLink>
-            <NavLink to="/sparks" className="mr-5 hover:text-gray-900">
-              Sparks
-            </NavLink>
             <NavLink to="/growwithus" className="mr-5 hover:text-gray-900">
               Grow With Us
             </NavLink>

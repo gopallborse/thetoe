@@ -5,8 +5,6 @@ import Footer from "./Components/Footer";
 import Home from "./Components/Home";
 import Dots from "./Components/Dots";
 import Dot from "./Components/Dot";
-import Sparks from "./Components/Sparks";
-import Spark from "./Components/Spark";
 import GrowWithUs from "./Components/GrowWithUs";
 import WhoWeAre from "./Components/WhoWeAre";
 import ContactUs from "./Components/ContactUs";
@@ -21,29 +19,19 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: null,
-      email: null,
-      passowrd: null,
+      name: "",
+      email: "",
+      passowrd: "",
       isRegistered: false,
-      showPass: false,
-      dots: [],
-      sparks: [],
+      dots: []
     };
   }
 
   componentDidMount() {
     axios
-      .get("https://jsonplaceholder.typicode.com/posts")
+      .get("https://jsonplaceholder.typicode.com/posts?_page=1&_limit=6")
       .then((response) => {
         this.setState({ dots: response.data });
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-    axios
-      .get("https://jsonplaceholder.typicode.com/comments")
-      .then((response) => {
-        this.setState({ sparks: response.data });
       })
       .catch((error) => {
         console.log(error);
@@ -51,6 +39,11 @@ class App extends Component {
   }
 
   loginHandler = (event) => {
+    event.preventDefault();
+    this.setState({ isRegistered: true });
+  };
+
+  signUpHandler = (event) => {
     event.preventDefault();
     this.setState({ isRegistered: true });
   };
@@ -64,11 +57,6 @@ class App extends Component {
             <Route path="/" element={<Home />} />
             <Route path="/dots" element={<Dots dots={this.state.dots} />} />
             <Route path="/dot" element={<Dot />} />
-            <Route
-              path="/sparks"
-              element={<Sparks sparks={this.state.sparks} />}
-            />
-            <Route path="/spark" element={<Spark />} />
             <Route path="/growwithus" element={<GrowWithUs />} />
             <Route path="/whoweare" element={<WhoWeAre />} />
             <Route path="/contactus" element={<ContactUs />} />
@@ -77,8 +65,9 @@ class App extends Component {
               path="/login"
               element={<Login submit={this.loginHandler} />}
             />
-
-            <Route path="/signup" element={<SignUp />} />
+            <Route
+              path="/signup"
+              element={<SignUp submit={this.signUpHandler} />} />
             <Route path="/*" element={<NoPage />} />
           </Routes>
           <Footer />
