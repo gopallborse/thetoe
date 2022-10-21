@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import ReactPaginate from "react-paginate"
 
 const Dots = (props) => {
   return (
@@ -131,6 +132,18 @@ const Dots = (props) => {
             </div>
           </div>
         </div>
+
+      {/* <Items currentItems={currentItems} /> */}
+      <ReactPaginate
+        breakLabel="..."
+        nextLabel="next >"
+        // onPageChange={handlePageClick}
+        // pageRangeDisplayed={5}
+        // pageCount={pageCount}
+        // previousLabel="< previous"
+        // renderOnZeroPageCount={null}
+      />
+
       </section>
     </div>
   );
