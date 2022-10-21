@@ -16,20 +16,19 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import axios from "axios";
 
 class App extends Component {
+
   constructor(props) {
     super(props);
     this.state = {
-      name: "",
-      email: "",
-      passowrd: "",
-      isRegistered: false,
       dots: []
     };
   }
 
   componentDidMount() {
+    const limit = 3
+    const page = 1
     axios
-      .get("https://jsonplaceholder.typicode.com/posts?_page=1&_limit=3")
+      .get(`https://jsonplaceholder.typicode.com/posts?_limit=${limit}&_page=${page}`)
       .then((response) => {
         this.setState({ dots: response.data });
       })
@@ -38,21 +37,11 @@ class App extends Component {
       });
   }
 
-  loginHandler = (event) => {
-    event.preventDefault();
-    this.setState({ isRegistered: true });
-  };
-
-  signUpHandler = (event) => {
-    event.preventDefault();
-    this.setState({ isRegistered: true });
-  };
-
   render() {
     return (
       <div>
         <BrowserRouter>
-          <Header isRegistered={this.state.isRegistered} />
+          <Header />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/dots" element={<Dots dots={this.state.dots} />} />
@@ -61,13 +50,8 @@ class App extends Component {
             <Route path="/whoweare" element={<WhoWeAre />} />
             <Route path="/contactus" element={<ContactUs />} />
             <Route path="/greet" element={<Greet />} />
-            <Route
-              path="/login"
-              element={<Login submit={this.loginHandler} />}
-            />
-            <Route
-              path="/signup"
-              element={<SignUp submit={this.signUpHandler} />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<SignUp />} />
             <Route path="/*" element={<NoPage />} />
           </Routes>
           <Footer />
