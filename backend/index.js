@@ -6,6 +6,8 @@ app.get('/', (req, res) => {
   res.send('Gopall is just terrific...')
 })
 
+app.use('/', express.static(__dirname + '/'))
+
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+  console.log(`App listening on port ${port}`)
 })

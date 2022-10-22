@@ -13,30 +13,8 @@ import SignUp from "./SignUp";
 import Greet from "./Greet";
 import NoPage from "./NoPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import axios from "axios";
 
 class App extends Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      dots: []
-    };
-  }
-
-  componentDidMount() {
-    const limit = 3
-    const page = 1
-    axios
-      .get(`https://jsonplaceholder.typicode.com/posts?_limit=${limit}&_page=${page}`)
-      .then((response) => {
-        this.setState({ dots: response.data });
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }
-
   render() {
     return (
       <div>
@@ -44,7 +22,7 @@ class App extends Component {
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/dots" element={<Dots dots={this.state.dots} />} />
+            <Route path="/dots" element={<Dots />} />
             <Route path="/dot" element={<Dot />} />
             <Route path="/growwithus" element={<GrowWithUs />} />
             <Route path="/whoweare" element={<WhoWeAre />} />

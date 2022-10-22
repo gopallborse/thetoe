@@ -2,110 +2,64 @@ import React from "react";
 
 const Home = () => {
   return (
-    <div>
-      <div className="flex justify-center bg-black">
-        <nav className="self-center w-full max-w-7xl  ">
-          <div className="flex flex-col lg:flex-row justify-around items-center text-white">
-            <h1 className="uppercase pl-5 py-4 text-lg font-sans font-bold">
-              hero
-            </h1>
-            <ul className="hidden lg:flex items-center text-[18px] font-semibold pl-32">
-              <li className="hover:underline  underline-offset-4 decoration-2 decoration-white py-2 rounded-lg px-5">
-                <a href="#">Home</a>
-              </li>
-              <li className="hover:underline underline-offset-4 decoration-2 decoration-white py-2 rounded-lg px-5">
-                <a href="#">Contact</a>
-              </li>
-              <li className="hover:underline underline-offset-4 decoration-2 decoration-white py-2 rounded-lg px-5">
-                <a href="#">Services</a>
-              </li>
-              <li className="hover:underline underline-offset-4 decoration-2 decoration-white py-2 rounded-lg px-5">
-                <a href="#">About</a>
-              </li>
-              <li className="hover:underline underline-offset-4 decoration-2 decoration-white py-2 rounded-lg px-5">
-                <a href="#">Pricing</a>
-              </li>
-            </ul>
-            <div className="text-white text-center text-base pr-5  inline-flex">
-              {" "}
-              <a
-                href="#"
-                className="w-8 h-8 inline-block rounded-full pt-[6px] hover:text-blue-500"
-              >
-                <i className="fa fa-twitter" />
-              </a>{" "}
-              <a
-                href="#"
-                className="w-8 h-8 inline-block rounded-full pt-[5px] hover:text-blue-500"
-              >
-                <i className="fa fa-instagram" />
-              </a>{" "}
-              <a
-                href="#"
-                className="w-8 h-8 inline-block rounded-full pt-[5px] hover:text-blue-500"
-              >
-                <i className="fa fa-facebook" />
-              </a>{" "}
-              <a
-                href="#"
-                className="w-8 h-8 inline-block rounded-full pt-[5px] hover:text-blue-500"
-              >
-                <i className="fa fa-google" />
-              </a>{" "}
-              <a
-                href="#"
-                className="w-8 h-8 inline-block rounded-full pt-[5px] hover:text-blue-500"
-              >
-                <i className="fa fa-linkedin" />
-              </a>{" "}
-            </div>
+    <div className="relative overflow-hidden bg-white">
+      <div className="mx-auto max-w-7xl">
+        <div className="relative z-10 bg-white pb-8 sm:pb-16 md:pb-20 lg:w-full lg:max-w-2xl lg:pb-28 xl:pb-32">
+          <svg
+            className="absolute inset-y-0 right-0 hidden h-full w-48 translate-x-1/2 transform text-white lg:block"
+            fill="currentColor"
+            viewBox="0 0 100 100"
+            preserveAspectRatio="none"
+            aria-hidden="true"
+          >
+            <polygon points="50,0 100,0 50,100 0,100" />
+          </svg>
+          <div>
+            <div className="relative px-4 pt-6 sm:px-6 lg:px-8"></div>
           </div>
-        </nav>
-      </div>
-      <div className="flex justify-center bg-black p-8 ">
-        <div className="flex flex-col justify-center">
-          <div className="flex flex-col lg:flex-row max-w-7xl justify-center items-center p-2 space-y-3 w-full">
-            <div className="flex flex-col  text-white md:items-start items-center justify-between  space-y-3 px-8">
-              <div className="text-5xl md:text-7xl font-bold ">
-                The Theory of Everything{" "}
-              </div>
-              <div className="text-lg uppercase md:text-3xl   ">
-                Interactive Components
-              </div>
-              <div className="text-xl md:text-3xl   ">@tailblocks.org</div>
-            </div>
-            <div className="flex space-x-2 md:space-x-6 md:m-4">
-              <div className="md:w-20 w-10 h-60 md:h-96  overflow-hidden rounded-xl">
-                <img
-                  src="https://source.unsplash.com/100x400/?man"
-                  className="h-full w-full"
-                  alt=""
-                />
-              </div>
-              <div className="md:w-60 w-28 h-60 md:h-96  overflow-hidden rounded-xl">
-                <img
-                  src="https://source.unsplash.com/200x400/?girl"
-                  className="h-full w-full"
-                  alt=""
-                />
-              </div>
-              <div className="md:w-28  w-16 h-60 md:h-96  overflow-hidden rounded-xl">
-                <img
-                  src="https://source.unsplash.com/100x400/?boy"
-                  className="h-full w-full"
-                  alt=""
-                />
-              </div>
-              <div className="md:w-20 w-10 h-60 md:h-96  overflow-hidden rounded-xl">
-                <img
-                  src="https://source.unsplash.com/100x400/?women"
-                  className="h-full w-full"
-                  alt=""
-                />
+          <main className="mx-auto mt-10 max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+            <div className="sm:text-center lg:text-left">
+              <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
+                <span className="block xl:inline">the theory of </span>
+                <span className="block text-indigo-600 xl:inline">
+                  EVERYTHING
+                </span>
+              </h1>
+              <p className="mt-3 text-base text-gray-500 sm:mx-auto sm:mt-5 sm:max-w-xl sm:text-lg md:mt-5 md:text-xl lg:mx-0">
+                The Beautiful Universe is on an Endless Journey of Perfection.
+                <br />
+                We all companions ought to associate each other to advance.
+                <br />
+                The more we unite, the faster we advance.
+              </p>
+              <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+                <div className="rounded-md shadow">
+                  <a
+                    href="#"
+                    className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 md:py-4 md:px-10 md:text-lg"
+                  >
+                    Get started
+                  </a>
+                </div>
+                <div className="mt-3 sm:mt-0 sm:ml-3">
+                  <a
+                    href="#"
+                    className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-100 px-8 py-3 text-base font-medium text-indigo-700 hover:bg-indigo-200 md:py-4 md:px-10 md:text-lg"
+                  >
+                    Live demo
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
+          </main>
         </div>
+      </div>
+      <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+        <img
+          className="h-56 w-full object-cover sm:h-72 md:h-96 lg:h-full lg:w-full"
+          src="https://media-cldnry.s-nbcnews.com/image/upload/newscms/2018_11/2361841/ss-9-180314-stephen-hawking-obit-ac-139a.jpg"
+          alt=""
+        />
       </div>
     </div>
   );
