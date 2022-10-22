@@ -12,7 +12,7 @@ function Dots() {
   useEffect(() => {
     const getDots = async () => {
       const result = await fetch(
-        `https://jsonplaceholder.typicode.com/posts?_page=1&_limit=${limit}`
+        `http://localhost:3001/dots?_page=1&_limit=${limit}`
       );
       const data = await result.json();
       const total = result.headers.get("x-total-count");
@@ -24,7 +24,7 @@ function Dots() {
 
   const fetchDots = async (currentPage) => {
     const result = await fetch(
-      `https://jsonplaceholder.typicode.com/posts?_page=${currentPage}&_limit=${limit}`
+      `http://localhost:3001/dots?_page=${currentPage}&_limit=${limit}`
     );
     const data = await result.json();
     return data;
