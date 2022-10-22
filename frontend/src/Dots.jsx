@@ -100,7 +100,7 @@ function Dots() {
               return (
                 <DotPreview
                   key={a.id}
-                  id={a.id}
+                  category={a.category}
                   title={a.title}
                   body={a.body}
                 />
@@ -124,7 +124,7 @@ const DotPreview = (props) => {
         />
         <div className="p-6">
           <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-            CATEGORY {props.id}
+            {props.category}
           </h2>
           <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
             {props.title}

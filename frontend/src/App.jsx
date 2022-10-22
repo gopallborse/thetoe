@@ -11,6 +11,7 @@ import ContactUs from "./ContactUs";
 import Login from "./Login";
 import SignUp from "./SignUp";
 import Greet from "./Greet";
+import NewDot from "./NewDot";
 import NoPage from "./NoPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -28,6 +29,7 @@ class App extends Component {
             <Route path="/whoweare" element={<WhoWeAre />} />
             <Route path="/contactus" element={<ContactUs />} />
             <Route path="/greet" element={<Greet />} />
+            <Route path="/newdot" element={<NewDot />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/*" element={<NoPage />} />
