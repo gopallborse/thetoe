@@ -38,6 +38,7 @@ function Dots() {
 
   return (
     <div className="md:container md:mx-auto px-40">
+      <div>
       <ReactPaginate
         previousLabel={
           <svg
@@ -81,7 +82,7 @@ function Dots() {
         pageLinkClassName={
           "relative inline-flex items-center border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20"
         }
-        // activeClassName={"relative z-10 inline-flex items-center border border-indigo-500 bg-indigo-50 px-4 py-2 text-sm font-medium text-indigo-600 focus:z-20"}
+        activeClassName={"relative z-10 inline-flex items-center border border-indigo-500 bg-indigo-50 text-sm font-medium text-indigo-600 focus:z-20"}
 
         previousClassName={
           "relative inline-flex items-center rounded-l-md border border-gray-300 bg-white px-2 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20"
@@ -93,6 +94,7 @@ function Dots() {
           "relative inline-flex items-center border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700"
         }
       />
+      </div>
       <div className="text-gray-600 body-font">
         <div className="container px-5 py-5 mx-auto">
           <div className="flex flex-wrap -m-4">

@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <div>
       <header className="text-gray-600 body-font">
@@ -51,6 +51,7 @@ const Header = () => {
             >
               SignUp
             </NavLink>
+            <h1>{props.name ? `Welcome ${props.name}` : "Login"}</h1>
           </div>
         </div>
       </header>
