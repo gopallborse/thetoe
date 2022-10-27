@@ -1,6 +1,6 @@
 import React from "react";
 
-const WhoWeAre = () => {
+const OurTeam = () => {
   return (
     <div className="md:container md:mx-auto px-40">
       <section className="text-gray-600 body-font">
@@ -21,7 +21,7 @@ const WhoWeAre = () => {
                 <img
                   alt="team"
                   className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4"
-                  src="https://dummyimage.com/200x200"
+                  src="https://xsgames.co/randomusers/avatar.php?g=male"
                 />
                 <div className="flex-grow sm:pl-8">
                   <h2 className="title-font font-medium text-lg text-gray-900">
@@ -81,7 +81,7 @@ const WhoWeAre = () => {
                 <img
                   alt="team"
                   className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4"
-                  src="https://dummyimage.com/201x201"
+                  src="https://xsgames.co/randomusers/avatar.php?g=female"
                 />
                 <div className="flex-grow sm:pl-8">
                   <h2 className="title-font font-medium text-lg text-gray-900">
@@ -141,7 +141,7 @@ const WhoWeAre = () => {
                 <img
                   alt="team"
                   className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4"
-                  src="https://dummyimage.com/204x204"
+                  src="https://xsgames.co/randomusers/avatar.php?g=female"
                 />
                 <div className="flex-grow sm:pl-8">
                   <h2 className="title-font font-medium text-lg text-gray-900">
@@ -201,7 +201,7 @@ const WhoWeAre = () => {
                 <img
                   alt="team"
                   className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4"
-                  src="https://dummyimage.com/206x206"
+                  src="https://xsgames.co/randomusers/avatar.php?g=male"
                 />
                 <div className="flex-grow sm:pl-8">
                   <h2 className="title-font font-medium text-lg text-gray-900">
@@ -263,4 +263,4 @@ const WhoWeAre = () => {
   );
 };
 
-export default WhoWeAre;
+export default OurTeam;

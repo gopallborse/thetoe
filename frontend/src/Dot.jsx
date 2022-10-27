@@ -10,7 +10,7 @@ const Dot = () => {
               <img
                 alt="content"
                 className="object-cover object-center h-full w-full"
-                src="https://dummyimage.com/1200x500"
+                src="https://picsum.photos/1200/500"
               />
             </div>
             <div className="flex flex-col sm:flex-row mt-10">
@@ -33,7 +33,7 @@ const Dot = () => {
                   <h2 className="font-medium title-font mt-4 text-gray-900 text-lg">
                     Phoebe Caulfield
                   </h2>
-                  <div className="w-12 h-1 bg-indigo-500 rounded mt-2 mb-4"></div>
+                  <div className="w-12 h-1 bg-blue-500 rounded mt-2 mb-4"></div>
                   <p className="text-base">
                     Raclette knausgaard hella meggs normcore williamsburg enamel
                     pin sartorial venmo tbh hot chicken gentrify portland.
@@ -52,7 +52,7 @@ const Dot = () => {
                   disrupt butcher paleo intelligentsia pabst before they sold
                   out four loko. 3 wolf moon brooklyn.
                 </p>
-                <a className="text-indigo-500 inline-flex items-center">
+                <a className="text-blue-500 inline-flex items-center">
                   Learn More
                   <svg
                     fill="none"

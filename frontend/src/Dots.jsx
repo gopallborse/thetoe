@@ -12,7 +12,7 @@ function Dots() {
   useEffect(() => {
     const getDots = async () => {
       const result = await fetch(
-        `http://localhost:3001/dots?_page=1&_limit=${limit}`
+        `https://jsonplaceholder.typicode.com/posts?_page=1&_limit=${limit}`
       );
       const data = await result.json();
       const total = result.headers.get("x-total-count");
@@ -24,7 +24,7 @@ function Dots() {
 
   const fetchDots = async (currentPage) => {
     const result = await fetch(
-      `http://localhost:3001/dots?_page=${currentPage}&_limit=${limit}`
+      `https://jsonplaceholder.typicode.com/posts?_page=${currentPage}&_limit=${limit}`
     );
     const data = await result.json();
     return data;
@@ -37,81 +37,97 @@ function Dots() {
   };
 
   return (
-    <div className="md:container md:mx-auto px-40">
-      <div>
-      <ReactPaginate
-        previousLabel={
-          <svg
-            className="h-5 w-5"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              fillRule="evenodd"
-              d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z"
-              clipRule="evenodd"
-            />
-          </svg>
-        }
-        nextLabel={
-          <svg
-            className="h-5 w-5"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              fillRule="evenodd"
-              d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-              clipRule="evenodd"
-            />
-          </svg>
-        }
-        breakLabel={"..."}
-        pageCount={pageCount}
-        marginPagesDisplayed={2}
-        pageRangeDisplayed={3}
-        onPageChange={handlePageClick}
-        containerClassName={
-          "isolate inline-flex -space-x-px rounded-md shadow-sm justify-self-center"
-        }
-        pageClassName={"page-item"}
-        pageLinkClassName={
-          "relative inline-flex items-center border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20"
-        }
-        activeClassName={"relative z-10 inline-flex items-center border border-indigo-500 bg-indigo-50 text-sm font-medium text-indigo-600 focus:z-20"}
-
-        previousClassName={
-          "relative inline-flex items-center rounded-l-md border border-gray-300 bg-white px-2 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20"
-        }
-        nextClassName={
-          "relative inline-flex items-center rounded-r-md border border-gray-300 bg-white px-2 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20"
-        }
-        breakClassName={
-          "relative inline-flex items-center border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700"
-        }
-      />
+    <>
+      <div className="flex flex-col text-center w-full mb-20 mt-24">
+        <h1 className="text-2xl font-medium title-font mb-4 text-gray-900 tracking-widest">
+          CONNECTING THE DOTS
+        </h1>
+        <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
+          Ever wondered how we learn new things? <br />
+          We see many things in life and keep those saved somewhere in our subconscious. <br />
+          At some point of time, all those saved memories connect and give us a broad picture. <br />
+          Same here at The ToE. <br />
+          Our articles, dots will connect and manifest into the so called The Theory of Everything. <br />
+          Keep reading.
+        </p>
       </div>
-      <div className="text-gray-600 body-font">
-        <div className="container px-5 py-5 mx-auto">
-          <div className="flex flex-wrap -m-4">
-            {dots.map((a) => {
-              return (
-                <DotPreview
-                  key={a.id}
-                  category={a.category}
-                  title={a.title}
-                  body={a.body}
-                />
-              );
-            })}
+      <div className="md:container md:mx-auto px-40">
+        <div className="text-gray-600 body-font">
+          <div className="container px-5 py-5 mx-auto">
+            <div className="flex flex-wrap -m-4">
+              {dots.map((a) => {
+                return (
+                  <DotPreview
+                    key={a.id}
+                    category={a.category}
+                    title={a.title}
+                    body={a.body}
+                  />
+                );
+              })}
+            </div>
           </div>
         </div>
+        <div className="p-4">
+          <ReactPaginate
+            previousLabel={
+              <svg
+                className="h-5 w-5"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            }
+            nextLabel={
+              <svg
+                className="h-5 w-5"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            }
+            breakLabel={"..."}
+            pageCount={pageCount}
+            marginPagesDisplayed={2}
+            pageRangeDisplayed={3}
+            onPageChange={handlePageClick}
+            containerClassName={
+              "isolate inline-flex -space-x-px rounded-md shadow-sm text-center"
+            }
+            pageClassName={"page-item"}
+            pageLinkClassName={
+              "relative inline-flex items-center border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20"
+            }
+            activeClassName={
+              "relative z-10 inline-flex items-center border border-indigo-500 bg-indigo-50 text-sm font-medium text-indigo-600 focus:z-20"
+            }
+            previousClassName={
+              "relative inline-flex items-center rounded-l-md border border-gray-300 bg-white px-2 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20"
+            }
+            nextClassName={
+              "relative inline-flex items-center rounded-r-md border border-gray-300 bg-white px-2 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20"
+            }
+            breakClassName={
+              "relative inline-flex items-center border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700"
+            }
+          />
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
@@ -121,7 +137,7 @@ const DotPreview = (props) => {
       <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
         <img
           className="lg:h-48 md:h-36 w-full object-cover object-center"
-          src="https://dummyimage.com/720x400"
+          src="https://picsum.photos/360/200"
           alt="blog"
         />
         <div className="p-6">
