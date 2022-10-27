@@ -13,7 +13,7 @@ const Footer = () => {
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth="2"
-              className="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
+              className="w-10 h-10 text-white p-2 bg-blue-500 rounded-full"
               viewBox="0 0 24 24"
             >
               <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
@@ -21,15 +21,7 @@ const Footer = () => {
             <span className="ml-3 text-xl">The ToE</span>
           </a>
           <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
-            © 2022 The ToE —
-            <a
-              href="https://twitter.com/knyttneve"
-              className="text-gray-600 ml-1"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              @knyttneve
-            </a>
+            © 2022 The ToE
           </p>
           <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
             <a className="text-gray-500">

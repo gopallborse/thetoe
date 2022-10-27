@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <div>
       <header className="text-gray-600 body-font">
@@ -13,14 +13,14 @@ const Header = () => {
             <NavLink to="/dots" className="mr-5 hover:text-gray-900">
               Dots
             </NavLink>
+            <NavLink to="/ourteam" className="mr-5 hover:text-gray-900">
+              Our Team
+            </NavLink>
             <NavLink to="/growwithus" className="mr-5 hover:text-gray-900">
               Grow With Us
             </NavLink>
-            <NavLink to="/whoweare" className="mr-5 hover:text-gray-900">
-              Who We Are
-            </NavLink>
-            <NavLink to="/contactus" className="mr-5 hover:text-gray-900">
-              Contact Us
+            <NavLink to="/reachus" className="mr-5 hover:text-gray-900">
+              Reach Us
             </NavLink>
           </nav>
           <a className="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-4 md:mb-0">
@@ -44,12 +44,6 @@ const Header = () => {
               className="mr-5 hover:text-gray-900"
             >
               Login
-            </NavLink>
-            <NavLink
-              to="/signup"
-              className="mr-5 hover:text-gray-900"
-            >
-              SignUp
             </NavLink>
           </div>
         </div>
